@@ -1,4 +1,4 @@
-const speedTest = document.querySelector("#speedGov-btn");
+const speedTest = document.querySelector("#speedgov-btn");
 speedTest.addEventListener('click', function () {
   const speedInput = document.querySelector("#speed");
   const speed = parseInt(speedInput.value);
@@ -10,15 +10,15 @@ speedTest.addEventListener('click', function () {
   const vehicleRegistration = vehicleRegistrationInput.value;
 
   if (speed <= speedLimit) {
-    alert(`Vehicle Registration: ${vehicleRegistration.toUpper()}\n"Your Speed is Ok"`);
+    alert(`Vehicle Registration: ${vehicleRegistration.toUpperCase()}\n"Your Speed is Ok"`);
   } else {
     demeritPoints = Math.floor((speed - speedLimit) / kmPerDemeritPoint);
     alert(`SLOW DOWN!
-    Vehicle Registration: ${vehicleRegistration.toUpper()}
+    Vehicle Registration: ${vehicleRegistration.toUpperCase()}
     Demerit Points: ${demeritPoints}`);
 
-    if (demeritPoints >= 2) {
-      alert(`Vehicle Registration: ${vehicleRegistration.toUpper()}\n"License suspended"`);
+    if (demeritPoints >= 12) {
+      alert(`Vehicle Registration: ${vehicleRegistration.toUpperCase()}\n"License suspended"`);
     }
   }
 });
