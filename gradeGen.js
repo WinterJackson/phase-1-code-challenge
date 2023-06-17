@@ -6,9 +6,9 @@ grader.addEventListener('click', function() {
   const name = nameInput.value;
   let grade = '';
 
-  if (marks >= 80 && marks <= 100) {
+  if (marks >= 79 && marks <= 100) {
     grade = "A";
-  } else if (marks >= 60 && marks <= 80) {
+  } else if (marks >= 60 && marks <= 79) {
     grade = "B";
   } else if (marks >= 50 && marks <= 59) {
     grade = "C";
@@ -20,5 +20,5 @@ grader.addEventListener('click', function() {
     grade = "INVALID INPUT";
   }
 
-  
+  alert(`Student: ${name}\nGrade: ${grade}`);
 });
