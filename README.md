@@ -20,6 +20,18 @@ To use the Speed Detector:
 1. Enter the vehicle registration number in the "Vehicle Reg." input field.
 2. Enter the detected speed in kilometers per hour (KMPH) in the "Speed" input field.
 3. Click the "SPEED GOVERNOR" button to perform the speed detection.
-4. An alert will be displayed with the vehicle registration and demerit points (if applicable).
+4. An alert will be displayed with the vehicle registration and demerit points.
+
+## Net Salary Calculator
+
+The Net Salary Calculator is a program that takes into account an employee's basic salary and benefits to calculate the final amount they will receive as their net salary. It considers various deductions such as Payee Tax, NHIF, and NSSF to arrive at the net salary, which is the actual amount the employee takes home after all deductions.
+
+To use the Net Salary Calculator:
+1. Enter the employee's name in the "Employee Name" input field.
+2. Enter the basic salary amount in Kenyan Shillings (KSH) in the "Basic Salary" input field.
+3. Click the corresponding buttons ("PAYE", "NHIF DEDUCTION", "NSSF DEDUCTION", "NET SALARY") to perform the respective calculations.
+4. Alerts will be displayed with the employee's name and the calculated values for each deduction and the net salary.
+
+
 
 
