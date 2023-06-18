@@ -8,6 +8,7 @@
     padding-top: 20px;
     padding-bottom: 100px;
     border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   }
 
 #logo {
@@ -34,5 +35,14 @@ button {
     border-radius: 5px;
 }
 
+#paye-btn {
+    margin-bottom: 10px;
+}
 
+#nhif-btn {
+    margin-bottom: 10px;
+}
   
+#nssf-btn {
+    margin-bottom: 10px;
+}
