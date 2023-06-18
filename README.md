@@ -58,7 +58,7 @@ To use this project, follow these steps below:
 
 ## Credits
 
-This project was developed by [John Jackson Winter].
+This project was developed by John Jackson Winter.
 
 ## License
 
