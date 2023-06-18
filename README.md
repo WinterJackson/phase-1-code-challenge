@@ -2,6 +2,12 @@
 
 This project consists of three code challenges: Student Grade Generator, Speed Detector, and Net Salary Calculator.
 
+The Student Grade Generator helps to calculate and assign grades to students based on their performance in different assessments. It simplifies the grading process and ensures consistency in evaluating the academic grades.
+
+The Speed Detector program is a tool that helps to monitor and enforce speed limits. By inputting the detected speed of a vehicle, the program determines if any penalties or warnings should be issued, encouraging safe driving.
+
+The Net Salary Calculator helps in determining an employee's net salary. It considers various deductions, such as taxes and contributions, to calculate the final amount the employee will receive after deductions have been made.
+
 ## Student Grade Generator
 
 The Student Grade Generator is a software tool designed to automate the process of generating grades for students based on their average performance in various assessments, such as tests, assignments, projects, and participation.
