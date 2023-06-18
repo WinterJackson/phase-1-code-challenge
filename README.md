@@ -32,6 +32,29 @@ To use the Net Salary Calculator:
 3. Click the corresponding buttons ("PAYE", "NHIF DEDUCTION", "NSSF DEDUCTION", "NET SALARY") to perform the respective calculations.
 4. Alerts will be displayed with the employee's name and the calculated values for each deduction and the net salary.
 
+## Files
 
+The following files are included in this project:
 
+- `index.html`: The main HTML file containing the structure and content of the web page.
+- `style.css`: The CSS file defining the styles for the web page.
+- `gradeGen.js`: The JavaScript file providing functionality for the Student Grade Generator.
+- `speedGov.js`: The JavaScript file providing functionality for the Speed Detector.
+- `taxCalc.js`: The JavaScript file providing functionality for the Net Salary Calculator.
+
+## Usage
+
+To use this project, follow these steps:
+
+1. Clone the repository: `git clone https://github.com/WinterJackson/phase-1-code-challenge.git`
+2. Open the `index.html` file in a web browser.
+3. Use the respective forms and buttons to interact with the different codes.
+
+## Credits
+
+This project was developed by [John Jackson Winter].
+
+## License
+
+This project is licensed under the [MIT License](LICENSE).
 
