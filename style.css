@@ -26,9 +26,13 @@ form {
   
 form label {
     margin-bottom: 1px;
+    font-weight: bold;
   }
 
 button {
     background-color: #f3b99c;
     border-radius: 5px;
 }
+
+
+  
