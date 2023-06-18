@@ -5,3 +5,9 @@
     background-color: #F4F4F4;
     padding: 15px;
   }
+
+#logo {
+    height: 10%;
+    width: 10%;
+    padding-bottom: 20px;
+  }
