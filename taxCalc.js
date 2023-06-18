@@ -32,6 +32,11 @@ function calculatePayeeTax(basicSalary) {
   }
   
 function calculateNHIFDeduction(basicSalary) {
+  // Check if basicSalary is a valid number
+  if (isNaN(basicSalary) || basicSalary <= 0) {
+    return 0; 
+  }
+  
   let nhifDeduction = 0;
 
   // Check the basicSalary range and assign the correct nhifDeduction value
