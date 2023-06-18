@@ -50,7 +50,7 @@ The following files are included in this project:
 
 ## Usage
 
-To use this project, follow these steps:
+To use this project, follow these steps below:
 
 1. Clone the repository: `git clone https://github.com/WinterJackson/phase-1-code-challenge.git`
 2. Open the `index.html` file in a web browser.

@@ -9,7 +9,7 @@ grader.addEventListener('click', function() {
   // Get the input element for the student name
   const nameInput = document.querySelector('#student-name'); 
 
-  // Get the value of the marks input and convert it to an integer
+  // Get the value of the marks input and convert it into an integer
   const marks = parseInt(marksInput.value); 
 
   // Get the value of the student name input

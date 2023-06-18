@@ -36,7 +36,7 @@ function calculateNHIFDeduction(basicSalary) {
   if (isNaN(basicSalary) || basicSalary <= 0) {
     return 0; 
   }
-  
+
   let nhifDeduction = 0;
 
   // Check the basicSalary range and assign the correct nhifDeduction value
@@ -117,7 +117,7 @@ function calculateNSSFContribution(basicSalary) {
     // Calculate the total deductions 
     const deductions = payeeTax + nhifDeduction + employeeContribution;
   
-    // Calculate the net salary 
+    // Calculate the Net salary 
     const netSalary = basicSalary - deductions;
   
     // Display an alert with the employee name and net salary
@@ -169,7 +169,7 @@ function calculateNSSFContribution(basicSalary) {
   // Add event listener to the netSalaryCalc button and call the calculateNetSalary function when clicked
   netSalaryCalc.addEventListener("click", calculateNetSalary); 
 
-  // Calculate net salary
+  // Calculate Net salary
   function calculateNetSalary() {
     const basicSalaryInput = document.querySelector("#basic-salary"); 
     const basicSalary = parseInt(basicSalaryInput.value); 
@@ -181,7 +181,7 @@ function calculateNSSFContribution(basicSalary) {
   
     // Calculate the total deductions
     const deductions = payeeTax + nhifDeduction + nssfContributions.employeeContribution; 
-    // Calculate the net salary
+    // Calculate the Net salary
     const netSalary = basicSalary - deductions; 
 
     // Display the employee name and net salary in an alert

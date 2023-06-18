@@ -25,7 +25,7 @@ speedTest.addEventListener('click', function () {
   const vehicleRegistration = vehicleRegistrationInput.value; 
 
   if (speed <= speedLimit) {
-    // Display an alert indicating that the speed is within the limit
+    // Display an alert showing that the speed is within the limit
     alert(`Vehicle Registration: ${vehicleRegistration.toUpperCase()}\n"Your Speed is Ok"`); 
   } else {
     // Calculate the demerit points based on the speed exceeding the speed limit
