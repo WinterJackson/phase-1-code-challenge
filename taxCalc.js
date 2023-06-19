@@ -79,6 +79,14 @@ function calculateNHIFDeduction(basicSalary) {
 }
 
 function calculateNSSFContribution(basicSalary) {
+    // Check if basicSalary is a valid number
+    if (isNaN(basicSalary) || basicSalary <= 0) {
+      return {
+        employeeContribution: 0,
+        employerContribution: 0
+      }; 
+    }
+
     // Check if the basicSalary exceeds the pensionable limit of 18000
     // If it does, set the pensionablePay to 18000, otherwise use the basicSalary 
     let pensionablePay;
@@ -101,10 +109,10 @@ function calculateNSSFContribution(basicSalary) {
     };
   }  
 
-  function calculateNetSalary() {
+function calculateNetSalary() {
     // Get the basic salary value from the input field and convert it to an integer
     const basicSalary = parseInt(basicSalaryInput.value);
-  
+
     // Calculate the payee tax based on the basic salary
     const payeeTax = calculatePayeeTax(basicSalary);
   
@@ -120,9 +128,6 @@ function calculateNSSFContribution(basicSalary) {
     // Calculate the Net salary 
     const netSalary = basicSalary - deductions;
   
-    // Display an alert with the employee name and net salary
-    alert(`Employee Name: ${employeeName.value}\nNet Salary: Ksh ${netSalary}`);
-  
     // Return an object containing the employee name and net salary
     return {
       employeeName: employeeName.value,
@@ -130,7 +135,6 @@ function calculateNSSFContribution(basicSalary) {
     };
   }
   
-
   payeeCalc.addEventListener("click", function() {
     // Retrieve the value of basicSalaryInput and convert it to an integer
     const basicSalary = parseInt(basicSalaryInput.value);
@@ -138,11 +142,20 @@ function calculateNSSFContribution(basicSalary) {
     // Call the calculatePayeeTax function passing the basicSalary as an argument
     const payeeTax = calculatePayeeTax(basicSalary);
   
-    // Display an alert with the employee's name and the calculated payeeTax
-    alert(`Employee Name: ${employeeName.value}\nPayee Tax: Ksh ${payeeTax}`);
-  });
-  
+    // Create a custom alert message box
+    const customAlert = document.createElement('div');
+    customAlert.classList.add('custom-alert');
+    customAlert.innerHTML = `
+      <h2><u>PAYEE TAX</u> </h2>
+      <p>Employee Name: ${employeeName.value}</p>
+      <p>Payee Tax: <strong>KSH ${Math.floor(payeeTax)}</strong></p>
+      <button onclick="this.parentNode.remove()">Close</button>
+    `;
 
+    // Append the custom alert message box to the document body
+    document.body.appendChild(customAlert);
+});
+  
   nhifCalc.addEventListener("click", function() {
     // Retrieve the basicSalary value from the input field and convert it to an integer
     const basicSalary = parseInt(basicSalaryInput.value);
@@ -150,11 +163,20 @@ function calculateNSSFContribution(basicSalary) {
     // Call the calculateNHIFDeduction function with the basicSalary as an argument
     const nhifDeduction = calculateNHIFDeduction(basicSalary);
   
-    // Display an alert with the employee name and the calculated NHIF deduction
-    alert(`Employee Name: ${employeeName.value}\nThe NHIF Deduction is KSH: ${nhifDeduction}`);
-  });
-  
+    // Create a custom alert message box
+    const customAlert = document.createElement('div');
+    customAlert.classList.add('custom-alert');
+    customAlert.innerHTML = `
+      <h2><u>NHIF DEDUCTION</u> </h2>
+      <p>Employee Name: ${employeeName.value}</p>
+      <p>NHIF Deduction: <strong>KSH ${Math.floor(nhifDeduction)}</strong></p>
+      <button onclick="this.parentNode.remove()">Close</button>
+    `;
 
+    // Append the custom alert message box to the document body
+    document.body.appendChild(customAlert);
+});
+  
   nssfCalc.addEventListener("click", function() {
     // Retrieve the basic salary from the input field and convert it to an integer
     const basicSalary = parseInt(basicSalaryInput.value);
@@ -162,11 +184,20 @@ function calculateNSSFContribution(basicSalary) {
     // Call the calculateNSSFContribution function with the basicSalary as an argument
     const { employeeContribution } = calculateNSSFContribution(basicSalary);
   
-    // Display an alert message with the NSSF deduction for the employee
-    alert(`The NSSF deduction for the employee ${employeeName.value} is KSH: ${employeeContribution}`);
-  });
+    // Create a custom alert message box
+    const customAlert = document.createElement('div');
+    customAlert.classList.add('custom-alert');
+    customAlert.innerHTML = `
+      <h2><u>NSSF CONTRIBUTION</u> </h2>
+      <p>Employee Name: ${employeeName.value}</p>
+      <p>NSSF Contribution: <strong>KSH ${Math.floor(employeeContribution)}</strong></p>
+      <button onclick="this.parentNode.remove()">Close</button>
+    `;
+
+    // Append the custom alert message box to the document body
+    document.body.appendChild(customAlert);
+});
   
-  // Add event listener to the netSalaryCalc button and call the calculateNetSalary function when clicked
   netSalaryCalc.addEventListener("click", calculateNetSalary); 
 
   // Calculate Net salary
@@ -184,11 +215,17 @@ function calculateNSSFContribution(basicSalary) {
     // Calculate the Net salary
     const netSalary = basicSalary - deductions; 
 
-    // Display the employee name and net salary in an alert
-    alert(`Employee Name: ${employeeName.value}\nNet Salary: Ksh ${netSalary}`); 
-    return {
-      employeeName: employeeName.value,
-      netSalary: netSalary
-    };
+    // Create a custom alert message box
+    const customAlert = document.createElement('div');
+    customAlert.classList.add('custom-alert');
+    customAlert.innerHTML = `
+      <h2><u>NET SALARY</u></h2>
+      <p>Employee Name: ${employeeName.value}</p>
+      <p>Net Salary: <strong>KSH ${Math.floor(netSalary)}</strong></p>
+      <button onclick="this.parentNode.remove()">Close</button>
+    `;
+
+    // Append the custom alert message box to the document body
+    document.body.appendChild(customAlert);
   }
   

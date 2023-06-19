@@ -1,38 +1,39 @@
-// Get the button element with the tag name 'button'
-const grader = document.querySelector('button'); 
+// Get the button element with the ID 'grade-gen-btn'
+const gradeGenButton = document.querySelector('#grader-btn');
 
-// Add event listener to the grader button and define an anonymous function to be executed when clicked
-grader.addEventListener('click', function() { 
-  // Get the input element for marks  
-  const marksInput = document.querySelector('#marks'); 
+// Add a click event listener to the gradeGenButton
+gradeGenButton.addEventListener('click', function() {
+  const marksInput = document.querySelector('#marks');
+  const nameInput = document.querySelector('#student-name');
+  const marks = parseInt(marksInput.value);
+  const name = nameInput.value;
 
-  // Get the input element for the student name
-  const nameInput = document.querySelector('#student-name'); 
+  let grade = '';
 
-  // Get the value of the marks input and convert it into an integer
-  const marks = parseInt(marksInput.value); 
-
-  // Get the value of the student name input
-  const name = nameInput.value; 
-
-  // Initialize an empty string for the grade
-  let grade = ''; 
-
-  // Determine the grade based on the marks
   if (marks >= 79 && marks <= 100) {
-    grade = "A";
+    grade = 'A';
   } else if (marks >= 60 && marks <= 79) {
-    grade = "B";
+    grade = 'B';
   } else if (marks >= 50 && marks <= 59) {
-    grade = "C";
+    grade = 'C';
   } else if (marks >= 40 && marks <= 49) {
-    grade = "D";
+    grade = 'D';
   } else if (marks >= 0 && marks <= 39) {
-    grade = "E";
+    grade = 'E';
   } else {
-    grade = "INVALID INPUT";
+    grade = 'Invalid';
   }
 
-  // Display the student name and grade in an alert
-  alert(`Student: ${name}\nGrade: ${grade}`); 
+  // Create a custom alert message box
+  const customAlert = document.createElement('div');
+  customAlert.classList.add('custom-alert');
+  customAlert.innerHTML = `
+    <h2><u>GRADE RESULT</u></h2>
+    <p>Student Name: ${name.toUpperCase()}</p>
+    <p>Grade: ${grade}</p>
+    <button onclick="this.parentNode.remove()">Close</button>
+  `;
+
+  // Append the custom alert message box to the document body
+  document.body.appendChild(customAlert);
 });
